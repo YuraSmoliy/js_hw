@@ -13,7 +13,6 @@ function sumSliceArray(arr, first, second){
 
 const arr1Task1 = [2, 3, 4, 5, 1, 9, 11, 5]; 
 
-
 try{
   console.log(`sum ${1} and ${5} elements of arr ${arr1Task1} = `, sumSliceArray(arr1Task1, 1, 5));
   console.log(`sum ${'1'} and ${3} elements of arr ${arr1Task1} = `, sumSliceArray(arr1Task1, '1', 9));
@@ -26,7 +25,6 @@ try{
     console.log(e.name, " ", e.message);
   }
 }
-
 
 // task 2
 // Створіть функцію checkAge(), яка запитує у користувача його ім'я, вік та статус (адмін, модератор, користувач) та генерує модальне вікно з помилкою, якщо:вік користувача менше 18 або більше 70 років (генерується помилка типу RangeError).користувач не ввів жодних даних в будь-якому полі (виводиться повідомлення The field is empty! Please enter your age з типом помилки Error). У полі статус введено неправильне слово (тип помилки EvalError).в полі вік введено нечислове значення. У всіх інших випадках користувач отримає доступ до перегляду фільму. У блоці catch передбачена можливість виведення назви та опису помилки.
@@ -50,7 +48,6 @@ function checkAge(){
     if(userAge < 18 || userAge > 70){
       throw new RangeError('We don\'t recommend you watch the movie.')
     }
-
 
   }catch (ex){
     alert(`${ex.name}: ${ex.message}`)
@@ -78,7 +75,6 @@ function calcRectangleArea(width, height){
   }catch (e){
     console.log(e.name, e.message);
   }
-
 
 // task 4
 // Створіть клас MonthException, конструктор якого приймає параметр message і ініціалізує поле name значенням MonthException.
