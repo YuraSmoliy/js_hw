@@ -72,7 +72,6 @@ function calcRectangleArea(width, height){
   return width * height;
 }
 
-
   try{
     console.log(`Rectangle (width = ${6}, height = ${8}) area = `,calcRectangleArea(6, 8));
     console.log(`Rectangle (width = ${'6'}, height = ${5}) area = `,calcRectangleArea('6', 5));
