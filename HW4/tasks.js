@@ -11,24 +11,22 @@ function sumSliceArray(arr, first, second){
   return arr[first] + arr[second];
 }
 
-function showSumSliceArray(arr, first, second){
-  try{
-    console.log(`sum ${first} and ${second} elements of arr ${arr} = `,sumSliceArray(arr, first, second));
-  }catch (e){
-    if(e.name === "TypeError") {
-      console.log(e.name, " ", e.message);
-    }
-    if(e.name === "RangeError") {
-      console.log(e.name, " ", e.message);
-    }
+const arr1Task1 = [2, 3, 4, 5, 1, 9, 11, 5]; 
+
+
+try{
+  console.log(`sum ${1} and ${5} elements of arr ${arr1Task1} = `, sumSliceArray(arr1Task1, 1, 5));
+  console.log(`sum ${'1'} and ${3} elements of arr ${arr1Task1} = `, sumSliceArray(arr1Task1, '1', 9));
+  console.log(`sum ${9} and ${3} elements of arr ${arr1Task1} = `, sumSliceArray(arr1Task1, 9, 3));
+}catch (e){
+  if(e.name === "TypeError") {
+    console.log(e.name, " ", e.message);
+  }
+  if(e.name === "RangeError") {
+    console.log(e.name, " ", e.message);
   }
 }
 
-const arr1Task1 = [2, 3, 4, 5, 1, 9, 11, 5];
-
-showSumSliceArray(arr1Task1, 1, 5);
-showSumSliceArray(arr1Task1, '1', 3);
-showSumSliceArray(arr1Task1, 9, 3);
 
 // task 2
 // Створіть функцію checkAge(), яка запитує у користувача його ім'я, вік та статус (адмін, модератор, користувач) та генерує модальне вікно з помилкою, якщо:вік користувача менше 18 або більше 70 років (генерується помилка типу RangeError).користувач не ввів жодних даних в будь-якому полі (виводиться повідомлення The field is empty! Please enter your age з типом помилки Error). У полі статус введено неправильне слово (тип помилки EvalError).в полі вік введено нечислове значення. У всіх інших випадках користувач отримає доступ до перегляду фільму. У блоці catch передбачена можливість виведення назви та опису помилки.
@@ -74,17 +72,14 @@ function calcRectangleArea(width, height){
   return width * height;
 }
 
-function showRectangleArea(width, height){
+
   try{
-    console.log(`Rectangle (width = ${width}, height = ${height}) area = `,calcRectangleArea(width, height));
+    console.log(`Rectangle (width = ${6}, height = ${8}) area = `,calcRectangleArea(6, 8));
+    console.log(`Rectangle (width = ${'6'}, height = ${5}) area = `,calcRectangleArea('6', 5));
   }catch (e){
     console.log(e.name, e.message);
   }
-}
 
-showRectangleArea(6, 8);
-showRectangleArea('6',5);
-showRectangleArea('2','3');
 
 // task 4
 // Створіть клас MonthException, конструктор якого приймає параметр message і ініціалізує поле name значенням MonthException.

@@ -3,12 +3,9 @@
 const arrTask1 = [5, 3, 4, 5, 6, 7, 3];
 
 function compact(arr) {
-  return arr
-    .reverse()
-    .filter((elem, index) => {
-      return index == arr.lastIndexOf(elem);
-    })
-    .reverse();
+  return arr.filter((elem, index) => {
+      return index == arr.indexOf(elem);
+    });
 }
 
 const arr2 = compact(arrTask1);
@@ -23,10 +20,9 @@ console.log(arr2); // [5,3,4,6,7]
 let arrTask2 = createArray(2, 9);
 
 function createArray(start, end) {
-  const arr = new Array(end - start + 1);
-  for (j = 0; j < arr.length; j++) {
-    arr[j] = start;
-    start += 1;
+  const arr = [];
+  for (j = start; j <= end; j++) {
+    arr.push(j)
   }
   return arr;
 }
@@ -50,7 +46,7 @@ showIntegersInRange(0, 9);
 function randArray(k) {
   const arr = [];
   for (let i = 0; i < k; i++) {
-    arr.push(Math.ceil(Math.random() * 500));
+    arr.push(Math.floor(Math.random() * 500) + 1);
   }
   return arr;
 }
@@ -63,7 +59,7 @@ console.log(randArray(5));
 let arrTask5 = [5, 'Limit', 12, 'a', '3', 99, 2, [2, 4, 3, '33', 'a', 'text'], 'strong', 'broun'];
 
 function funcName(arr) {
-  let newArr = [...arr].flat(2);
+  let newArr = arr.flat();
   let arrNumbers = newArr.filter((elem) => {
     return typeof elem === 'number';
   });
@@ -81,13 +77,13 @@ console.log(arrNew);
 function calc(a, b, op){
   switch(op){
     case 1:
-      return a-b;
+      return a - b;
     case 2:
-      return a*b;
+      return a * b;
     case 3:
-      return a/b;
+      return a / b;
     default:
-      return a+b;
+      return a + b;
   }
 }
 console.log('3 - 2 = ', calc(3,2,1));
