@@ -6,7 +6,7 @@
 //         3) із затримкою 2 сек перемістіть вікно в точку з координатами (200, 200)
 //         4) із затримкою 2 сек закрийте вікно.
 
-let newWindow = window.open("", "", "width=300,height=300");
+let newWindow = window.open("", "", "width=300, height=300");
 
 setTimeout(() => {
   newWindow.resizeTo(500, 500);

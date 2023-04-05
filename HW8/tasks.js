@@ -13,12 +13,12 @@ console.log(upperCase('RegExp'));
 // Task 2
 // Напишіть функцію, яка приймає рядкові дані і виконує перевірку на їх відповідність емейлу. Валідними вважаються всі символи на різних позиціях.
 
-function checkEmail(text){
-  const regExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+function checkEmailTask2(text){
+  const regExp = /^[a-zA-Z\d._%+-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,6}$/;
   return regExp.test(text);
 }
 
-console.log(checkEmail("Qmail2@gmail.com"));
+console.log(checkEmailTask2("Qmail2@gmail.com"));
 
 // Task 3
 // Напишіть регулярний вираз, який в рядковому тексті 2 підстрічки буде міняти місцями.
