@@ -34,14 +34,10 @@ console.log(age4); // 26
 // Task 3
 // Напишіть функцію mul(), яка приймає будь-яку кількість параметрів різного типу і повертає добуток параметрів типу Number.
 // Якщо параметри типу Number відсутні, повертає число 0.
-function mul(...arg) {
-   return arg.reduce((acc,elem) =>{
-    if(typeof elem === 'number'){
-      return acc + elem;
-    }else{
-      return acc;
-    }
-   },0)
+function mul(...args) {
+  const numbers = args.filter((value) => typeof value === 'number')
+  if (!numbers.length) return 0;
+  return numbers.reduce((previous, current) => previous * current)
 }
 console.log(mul(1, "str", 2, 3, true)); // 6
 console.log(mul(null, "str", false, true)); // 0
