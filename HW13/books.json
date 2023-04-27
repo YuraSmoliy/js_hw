@@ -1,0 +1,20 @@
+{
+  "books": [
+    {
+      "author": "J.D. Salinger"
+    },
+    {
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee"
+    },
+    {
+      "author": "George Orwell"
+    },
+    {
+      "author": "F. Scott Fitzgerald"
+    },
+    {
+      "author": "Gabriel Garcia Marquez"
+    }
+  ]
+}
